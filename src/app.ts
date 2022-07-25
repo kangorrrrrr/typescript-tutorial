@@ -1,3 +1,6 @@
+import { HasFormatter } from './interfaces/HasFormatter';
+import { Invoice } from "./classes/Invoice";
+import { Payment } from "./classes/Payment";
 // const anchor = document.querySelector('a')!;
 
 // console.log(anchor.href);
@@ -28,7 +31,8 @@ console.log(me);
 
 
 // Classes
-import { Invoice } from "./classes/Invoice";
+
+
 
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
