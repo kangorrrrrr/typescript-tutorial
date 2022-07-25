@@ -1,23 +1,28 @@
 "use strict";
 // const anchor = document.querySelector('a')!;
-// console.log(anchor.href);
+Object.defineProperty(exports, "__esModule", { value: true });
+const me = {
+    name: 'Shuan',
+    age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spend', amount);
+        return amount;
+    }
+};
+console.log(me);
 // Classes
-class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}.`;
-    }
-}
-const invOne = new Invoice('mario', 'work on the mario website', 250);
-const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+const Invoice_1 = require("./classes/Invoice");
+const invOne = new Invoice_1.Invoice('mario', 'work on the mario website', 250);
+const invTwo = new Invoice_1.Invoice('luigi', 'work on the luigi website', 300);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-console.log(invoices);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
 // const form = document.querySelector('form')!;
 const form = document.querySelector('.new-item-form');
 // console.log(form.children);
